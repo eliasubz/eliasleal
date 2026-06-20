@@ -1,0 +1,19 @@
+title: Flow MRI Notes
+description: Recreating 4D flow MRI papers with small, reproducible experiments.
+url: ""
+baseurl: ""
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:title/
+
+author:
+  name: Elias
+
+plugins: []
+
+kramdown:
+  math_engine: mathjax
+
+exclude:
+  - README.md
+  - Gemfile.lock
