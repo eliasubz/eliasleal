@@ -3,11 +3,11 @@
   --muted: #6c757d;
   --light: #f8f9fa;
   --border: #e9ecef;
-  --accent: #2698ba;
-  --accent-dark: #1c6f89;
+  --accent: #d10fbd;
+  --accent-dark: #a20d92;
   --code: #f6f8fa;
-  --max-width: 930px;
-  --article-width: 760px;
+  --max-width: 1040px;
+  --article-width: 820px;
 }
 
 * {
@@ -63,12 +63,8 @@ a:hover {
 .brand {
   color: #111;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0;
-}
-
-.brand::first-letter {
-  font-weight: 700;
 }
 
 .brand:hover {
@@ -88,7 +84,8 @@ a:hover {
 }
 
 .nav-links a:hover {
-  color: #000;
+  color: var(--accent);
+  text-decoration: none;
 }
 
 .reading-progress {
@@ -136,9 +133,9 @@ h4 {
 
 h1 {
   margin: 0 0 0.3em;
-  font-family: "Roboto Slab", "Roboto", serif;
-  font-size: 42px;
-  font-weight: 400;
+  font-family: inherit;
+  font-size: 38px;
+  font-weight: 300;
 }
 
 h2 {
@@ -262,19 +259,32 @@ tbody tr:nth-child(odd) {
 }
 
 .post-header {
-  margin: 0 auto 38px;
-  padding: 18px 0 26px;
-  border-bottom: 0;
+  margin: 0 auto 46px;
+  padding: 38px 0 56px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .post-header h1 {
   margin-bottom: 0.25em;
+  font-size: 36px;
+  font-weight: 300;
 }
 
-.post-date {
+.post-date,
+.post-meta,
+.post-category {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
   margin: 10px 0 0;
+}
+
+.post-meta span {
+  padding: 0 8px;
+}
+
+.post-category {
+  margin-top: 4px;
 }
 
 .subtitle {
@@ -289,30 +299,154 @@ tbody tr:nth-child(odd) {
   font-size: 17px;
 }
 
-.post-content > p:first-child {
-  font-weight: 500;
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0 32px;
 }
 
-.post-list-item {
-  max-width: var(--article-width);
-  margin: 18px 0 26px;
-  padding-bottom: 22px;
+.social-links a {
+  display: inline-flex;
+  width: 31px;
+  height: 31px;
+  color: #111;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.social-links svg {
+  width: 31px;
+  height: 31px;
+  fill: currentColor;
+}
+
+.nav .social-links {
+  margin: 0;
+  gap: 10px;
+}
+
+.nav .social-links a {
+  width: 26px;
+  height: 26px;
+}
+
+.nav .social-links svg {
+  width: 26px;
+  height: 26px;
+}
+
+.home-posts {
+  max-width: 720px;
+  margin-top: 22px;
+}
+
+.home-post {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 24px;
+  align-items: baseline;
+  margin: 0 0 16px;
+}
+
+.home-post .post-date {
+  color: #111;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.home-post a {
+  color: var(--accent);
+  font-size: 18px;
+}
+
+.home-post a:hover {
+  color: var(--accent-dark);
+  text-decoration: none;
+}
+
+.blog-index {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.blog-preview {
+  margin: 0 0 44px;
+  padding: 0 0 58px;
   border-bottom: 1px solid var(--border);
 }
 
-.post-list-item .post-date {
-  display: block;
-  margin-bottom: 3px;
+.blog-preview:last-child {
+  margin-bottom: 0;
 }
 
-.post-list-item h3 {
-  margin: 0 0 4px;
+.blog-preview h1 {
+  margin: 0 0 8px;
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 1.28;
+}
+
+.blog-preview h1 a {
+  color: #111;
+}
+
+.blog-preview h1 a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.blog-description {
+  color: #111;
   font-size: 20px;
+  font-weight: 300;
+  line-height: 1.45;
+  margin: 0 0 20px;
 }
 
-.post-list-item p {
-  color: var(--muted);
+.blog-preview .post-meta,
+.blog-preview .post-category {
+  color: #8a8f98;
+  font-size: 17px;
+  margin: 8px 0 0;
+}
+
+.references {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  column-gap: 44px;
+  margin: 54px calc((var(--article-width) - var(--max-width)) / 2) 0;
+  padding: 28px 0 10px;
+  color: #7a7f87;
+  border-top: 1px solid var(--border);
+}
+
+.references h2 {
   margin: 0;
+  color: #70757d;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.references ol {
+  margin: 0;
+  padding-left: 1.25em;
+}
+
+.references li {
+  padding-left: 0.25em;
+  margin-bottom: 18px;
+}
+
+.references strong {
+  color: #6a6f77;
+  font-weight: 500;
 }
 
 .site-footer {
@@ -361,5 +495,32 @@ tbody tr:nth-child(odd) {
   .subtitle,
   .lede {
     font-size: 18px;
+  }
+
+  .references {
+    display: block;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .references h2 {
+    margin-bottom: 16px;
+  }
+
+  .home-post {
+    display: block;
+  }
+
+  .home-post .post-date {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .blog-preview {
+    padding-bottom: 42px;
+  }
+
+  .blog-preview h1 {
+    font-size: 30px;
   }
 }

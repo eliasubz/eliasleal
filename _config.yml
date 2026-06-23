@@ -1,4 +1,4 @@
-title: Flow MRI Notes
+title: Elias Miguel Leal
 description: Recreating 4D flow MRI papers with small, reproducible experiments.
 url: "https://eliasubz.github.io"
 baseurl: "/eliasleal"
@@ -7,7 +7,7 @@ highlighter: rouge
 permalink: /blog/:title/
 
 author:
-  name: Elias
+  name: Elias Miguel Leal
 
 plugins: []
 
