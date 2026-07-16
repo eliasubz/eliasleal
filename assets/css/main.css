@@ -261,7 +261,6 @@ tbody tr:nth-child(odd) {
 .post-header {
   margin: 0 auto 46px;
   padding: 38px 0 56px;
-  border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 
@@ -347,23 +346,25 @@ tbody tr:nth-child(odd) {
 }
 
 .home-post {
-  display: grid;
-  grid-template-columns: 170px minmax(0, 1fr);
-  gap: 24px;
+  display: flex;
   align-items: baseline;
+  gap: 12px;
   margin: 0 0 16px;
 }
 
 .home-post .post-date {
-  color: #111;
-  font-size: 17px;
-  font-weight: 700;
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 400;
   margin: 0;
+  white-space: nowrap;
 }
 
 .home-post a {
   color: var(--accent);
   font-size: 18px;
+  white-space: nowrap;
 }
 
 .home-post a:hover {
@@ -584,7 +585,12 @@ sup a[role="doc-noteref"] {
   }
 
   .home-post {
-    display: block;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+  }
+
+  .home-post a {
+    white-space: normal;
   }
 
   .home-post .post-date {

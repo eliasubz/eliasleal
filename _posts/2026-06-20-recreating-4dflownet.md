@@ -1,8 +1,7 @@
 ---
 layout: post
-title: "Reimplementing 4DFlowNet: PixelShuffle and a Custom Loss"
+title: "Reimplementing 4DFlowNet"
 date: 2026-07-16
-description: "A 4D Flow MRI reimplementation with a custom loss and a PixelShuffle ablation."
 read_time: "6 min read"
 ---
 
@@ -81,7 +80,7 @@ The recreated table above shows all 4D FlowNet implementations beat the Linear m
 
 I present a summary of 4D FlowNet, which upsamples and denoises 4D Flow MRI patches. The official 4D FlowNet was exclusively trained on synthetic phase and magnitude images generated from CFD simulations and generalizes well on healty volunteer data. Additionally, I conducted experiments that demonstrate that using a PixelShuffle instead of a trilinear upsampling layer improves the MAE x velocity gradient loss, while introducing checkerboard artifacts. These checkerboard artifacts are partially reduced by using an ICNR initialization which also increases the MAE loss. Note that the experiment runs even after 30 epochs did not converge, which makes it hard to predict how these upscaling methods behave at their capacity limits. 
 
-
+<!-- 
 ### Experimental Results
 
 Validation metrics after 30 epochs. Lower is better for every metric shown.
@@ -139,7 +138,7 @@ Validation metrics after 30 epochs. Lower is better for every metric shown.
       </tr>
     </tbody>
   </table>
-</div>
+</div> -->
 
 <p class="footnote" id="fn-synthetic-model" role="doc-footnote"><sup>1</sup> Simplified since the 3D model isn't from a real aorta model and the velocity field was sampled randomly (w/ heuristics) instead of using physics simulations (CFD). <a href="#fnref-synthetic-model" aria-label="Back to footnote reference">↩</a></p>
 
