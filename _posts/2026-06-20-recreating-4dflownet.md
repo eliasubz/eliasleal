@@ -4,7 +4,6 @@ title: "4DFlowNet: Paper Breakdown"
 date: 2026-06-23
 description: "Upscaling 4D Flow MRI scans with super-resolution networks. "
 read_time: "6 min read"
-category: "4D flow MRI"
 ---
 
 This post analyzes the 4DFlowNet (2020) paper and presents a small implementation of the paper [[1]](#ref-4dflownet).
@@ -46,7 +45,7 @@ The visual breakdown above showcases how the 4D FlowNet outperforms simple upsam
     <li id="ref-4dflownet">
       <strong>4DFlowNet: Super-Resolution 4D Flow MRI Using Deep Learning and Computational Fluid Dynamics.</strong>
       Ferdian, E., et al., 2020.
-      [<a href="https://github.com/EdwardFerdian/4DFlowNet">code</a>]
+      [<a href="https://arxiv.org/abs/2004.07035">arXiv</a>]
     </li>
     <li id="ref-srresnet">
       <strong>Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network.</strong>
