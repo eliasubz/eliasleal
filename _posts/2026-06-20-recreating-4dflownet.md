@@ -5,7 +5,7 @@ date: 2026-07-16
 read_time: "6 min read"
 ---
 
-This post analyzes the 4DFlowNet (2020) paper and presents experiments on the upscaling layer of the network, improving the MAE score over the baseline [[1]](#ref-4dflownet). 
+This post analyzes the 4DFlowNet (2020) paper and presents experiments on its upscaling layer, improving the MAE score compared to the original baseline [[1]](#ref-4dflownet). 
 
 ### Introduction
 
